@@ -28,7 +28,7 @@ void timer_init()
 void adc_init(void)
 {
 	DDRC &= ~(1 << PINC3); //set input pin as PORTC pin 1 Y%6
-	ADMUX |= (1 << REFS0); //set vcc reference
+	ADMUX |= (1 << REFS0) | (1 << MUX0) | (1 << MUX1); //set vcc reference and mux (adc3)
 	ADCSRA |= (1 << ADEN) | (1 << ADIE) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); // enable ADC auto trigger and conversion complete interrupt
 }
 
