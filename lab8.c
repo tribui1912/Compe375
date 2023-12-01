@@ -11,7 +11,7 @@ void timer0_init()
 {
 	TCCR0A |= (1 << WGM01); //set timer mode to ctc
 	TCCR0B |= (1 << CS02) | (1 << CS00); //set prescaler to 1024
-	OCR0A = 0xB9; //top value 10ms period 156-1 = 155 cycles
+	OCR0A = 0x4D; //top value 5ms period 78-1 = 77 cycles
 	OCR0B = 0x00; //duty cycle start with 0	
 	TIMSK0 |= (1 << OCIE0A) | (1 << OCIE0B); //Enable compare match A and B interrupt
 }
