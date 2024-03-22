@@ -27,7 +27,7 @@ void timer0_init() //initialize Timer0
 	OCR0A = 96; // X=5 => 6ms => 37.5% => 245*0.375 = 96
 }
 
-void timer2_init() //initialize Timer1
+void timer2_init() //initialize Timer2
 {
 	TCCR2A |= (1 << WGM21);
 	TIMSK2 |= (1 << OCIE2A) | (1 << OCIE2B); //enable A and B interupt
